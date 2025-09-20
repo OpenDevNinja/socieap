@@ -192,7 +192,7 @@ const About = () => {
             </section>
 
             {/* Team Section */}
-            <section className="section-padding">
+            {/* <section className="section-padding">
                 <div className="container-custom">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -262,7 +262,7 @@ const About = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
             <section className="section-padding bg-primary-green relative overflow-hidden">

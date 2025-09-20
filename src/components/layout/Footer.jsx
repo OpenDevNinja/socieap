@@ -123,7 +123,7 @@ const Footer = () => {
                         </ul>
 
                         {/* Newsletter */}
-                        <div className="mt-8">
+                        {/* <div className="mt-8">
                             <h5 className="font-semibold mb-3">Newsletter</h5>
                             <form className="flex">
                                 <input
@@ -138,7 +138,7 @@ const Footer = () => {
                                     S'abonner
                                 </button>
                             </form>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
