@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-sans text-neutral-dark antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading font-bold;
+    }
+
+    ::selection {
+        @apply bg-primary-green text-white;
+    }
+}
+
+@layer components {
+    .container-custom {
+        @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-primary-green text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-6 py-3 bg-primary-yellow text-neutral-dark font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary-green text-primary-green font-semibold rounded-lg hover:bg-primary-green hover:text-white transition-all duration-300;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden;
+    }
+
+    .section-padding {
+        @apply py-16 md:py-20 lg:py-24;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-green to-primary-light;
+    }
+}
+
+@layer utilities {
+    .animation-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 400ms;
+    }
+
+    .animation-delay-600 {
+        animation-delay: 600ms;
+    }
+
+    .backdrop-blur-custom {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-shadow-lg {
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-neutral-light;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary-green rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-light;
+}
+
+/* Loading animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin 3s linear infinite;
+}
+
+/* Image hover effects */
+.image-hover {
+    @apply overflow-hidden rounded-lg;
+}
+
+.image-hover img {
+    @apply transition-transform duration-500 ease-out;
+}
+
+.image-hover:hover img {
+    @apply scale-110;
+}
+
+/* Card hover animations */
+.card-hover {
+    @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+    @apply transform -translate-y-2;
+}
+
+/* Text animations */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+    .text-responsive {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+    }
+
+    h1 {
+        font-size: clamp(1.75rem, 6vw, 3rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+}
